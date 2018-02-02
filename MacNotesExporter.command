@@ -79,7 +79,7 @@ img {
 <body>');
 
 WITH
-        note(id, bid, fid, title) AS (SELECT Z_PK, ZBODY, ZFOLDER, ZTITLE FROM ZNOTE),
+        note(id, bid, fid, title) AS (SELECT Z_PK, ZBODY, ZFOLDER, ZTITLE FROM ZNOTE ORDER BY Z_PK DESC),
         body(id, html) AS (SELECT Z_PK, ZHTMLSTRING FROM ZNOTEBODY),
         folder(id, name) AS (SELECT Z_PK, ZNAME FROM ZFOLDER)
 SELECT
